@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 50px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx1kzQZFj4qPGPE-qE3q63mo3sOXntNg0alw&s');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    background: #b7a732;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+input, select {
+    margin: 5px 0;
+    padding: 5px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
