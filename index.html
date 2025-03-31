@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("latitude").value = position.coords.latitude;
+            document.getElementById("longitude").value = position.coords.longitude;
+        }
+
+        function showError(error) {
+            alert("Error getting location. Please enable GPS.");
+        }
+    </script>
+</head>
+<body onload="getLocation()">
+    <h2>Traffic Flow Prediction</h2>
+    <form action="/result" method="POST">
+        <label>Date:</label>
+        <input type="date" name="date" required><br>
+        
+        <label>Time:</label>
+        <input type="time" name="time" required><br>
+
+        <label>Latitude:</label>
+        <input type="text" id="latitude" name="latitude" required readonly><br>
+
+        <label>Longitude:</label>
+        <input type="text" id="longitude" name="longitude" required readonly><br>
+
+        <label>Is Holiday:</label>
+        <input type="checkbox" name="holiday"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

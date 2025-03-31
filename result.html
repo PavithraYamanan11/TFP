@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <h2><p><b>Nearest Junction: Junction {{ junction }}</b></p></h2>
+    <h2><p><b>Predicted number of vehicles: {{ predicted_vehicles }}</b></p></h2>
+    <h2><p><b>Traffic Flow: {{ traffic_status }}</b></p></h2>
+    <h2><p><b>Recommendation: {{ recommendation }}</b></p></h2>
+
+    <h3>Traffic Prediction Graph</h3>
+    <img src="{{ plot_path }}" alt="Traffic Prediction Graph" style="width:60%; height:auto; border: 2px solid black;">
+
+    <br><br>
+    <a href="/">Go Back</a>
+</body>
+</html>
